@@ -70,15 +70,15 @@ const sessionOptions = {
   },
 };
 
-app.get(
-  '/',
-  wrapAsync(async (req, res) => {
-    const allListings = await Listing.find({});
-    res.render('listings/index', {
-      allListings,
-    });
-  })
-);
+// app.get(
+//   '/',
+//   wrapAsync(async (req, res) => {
+//     const allListings = await Listing.find({});
+//     res.render('listings/index', {
+//       allListings,
+//     });
+//   })
+// );
 
 app.use(session(sessionOptions));
 app.use(flash());
