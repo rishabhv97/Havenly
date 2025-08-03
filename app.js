@@ -50,12 +50,12 @@ const store = MongoStore.create({
   crypto: {
     secret: process.env.SECRET,
   },
-  touchAfter: 24*60*60
+  touchAfter: 24 * 60 * 60,
 });
 
-store.on("error", ()=>{
-  console.log("Error in MONGO SESSION STORE", err);
-})
+store.on('error', () => {
+  console.log('Error in MONGO SESSION STORE', err);
+});
 
 const sessionOptions = {
   store,
@@ -69,11 +69,15 @@ const sessionOptions = {
   },
 };
 
-// app.get('/', (req, res) => {
-//   res.send('Root is Working');
-// });
-
-
+app.get(
+  '/',
+  wrapAsync(async (req, res) => {
+    const allListings = await Listing.find({});
+    res.render('listings/index', {
+      allListings,
+    });
+  })
+);
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -100,7 +104,7 @@ app.use((req, res, next) => {
 //     let registeredUser = await User.register(fakeUser, "helloworld");
 //     res.send(registeredUser);
 // });
-
+app.use('/', listingsRouter);
 app.use('/listings', listingsRouter);
 app.use('/listings/:id/reviews', reviewsRouter);
 app.use('/', userRouter);
