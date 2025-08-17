@@ -85,6 +85,20 @@
 
 ---
 
+🖼️ Screenshots  
+Here are some previews of the app in action:  
+
+- All Listings Page  
+  ![All Listings](./uploads/2.png)  
+
+- Single Listing Page  
+  ![Single Listing](./uploads/3.png)  
+
+- Auth & Create Listing  
+  ![Create, Signup & Login](./uploads/4.png)  
+
+---
+
 ## ✨ Project Purpose
 
 This project was built as a **learning project** to strengthen full-stack development skills and replicate real-world app functionality like **Airbnb**.
