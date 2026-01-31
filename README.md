@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Havenly on Render](https://wanderlust-ea0l.onrender.com) *(deployed version of the app)*
+🔗 [Havenly on Render](https://havenly-app.onrender.com/listings) *(deployed version of the app)*
 
 ---
 
